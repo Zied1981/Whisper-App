@@ -3,7 +3,7 @@ import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { backendUrl } from "../../api/api";
 
-const LoginPage = () => {
+const LoginPage = ({ setToken, setUser }) => {
   const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -17,17 +17,19 @@ const LoginPage = () => {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({ nickname, password }),
-      credentials: "include",
+      /* credentials: "include" */
     });
 
     const data = await res.json();
 
-    if (!data.result)
-      return setErrorMessage(
+    if (!data.result) {
+      setErrorMessage(
         data.message || "Failed to login,please try again"
+        /*   navigate("/register") */
       );
-
-    navigate("/register");
+    } else {
+      navigate("/dashboard");
+    }
 
     setToken(data.result.tokens.accessToken);
     setUser(data.result.user);
