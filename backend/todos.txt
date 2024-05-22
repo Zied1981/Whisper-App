@@ -1,0 +1,48 @@
+
+
+Whisper_app
+
+
+DatenModelle:
+1-User(  nickname, email , password, followers [ ], following [ ], isVerified, timestamp)
+2_Tweets( userId, content, )
+
+3-Kommentare( userId, tweetId, content, timestamp)
+4-likes( userId, tweetid, timestamps )
+
+
+Endpunkte:
+
+!!!!USER
+
+GET /users=> alle user abrufen 
+GET/user/:id=> einen user abrufen
+POST/users/register => user erstellen 
+POST/users/verifyEmail => user erstellen 
+POST/users/login => user erstellen 
+POST/users/refresh-Token => user erstellen 
+DELETE/users/:id => remove user & his tweets 
+
+
+!!!Tweets
+GET/tweets=> alle teets aufrufen
+GET/tweets/:id=> einen tweet aufrufen
+POST /tweets=> einen tweet erstellen
+Patch/tweet/:id =>  einen tweet Updaten 
+DELETE/tweet/:id=> remove tweet
+
+
+!!!kommentare 
+GET/kommentare=> alle Kommentare aufrufen
+GET/kommentar/:id=> einen kommentar aufrufen
+POST /kommentare=> einen Kommentar erstellen
+Patch/kommentar/:id =>  einen Kommentar updaten
+DELETE/kommentar/:id=> remove kommentar
+
+
+!!!likes
+
+GET/likes=> alle likes aufrufen
+GET/like/:id=> einen like  aufrufen
+POST /like=> einen like  erstellen
+DELETE/like/:id=> remove like
