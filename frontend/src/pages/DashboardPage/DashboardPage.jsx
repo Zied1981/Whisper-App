@@ -1,7 +1,7 @@
-import "./Dashboard.css";
+import "./DashboardPage.css";
 
-const Dashboard = () => {
+const DashboardPage = () => {
   return <h2>alo dash</h2>;
 };
 
-export default Dashboard;
+export default DashboardPage;

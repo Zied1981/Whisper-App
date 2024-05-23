@@ -2,8 +2,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import Dashboard from "./pages/Dashboard/Dashboard";
+
 import { useState } from "react";
+import DashboardPage from "./pages/DashboardPage/Dashboardpage";
 
 function App() {
   const [token, setToken] = useState(); // aktuell verwendete accessToken
@@ -19,7 +20,7 @@ function App() {
           path="/login"
           element={<LoginPage setToken={setToken} setUser={setUser} />}
         />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         {/* <Route
           path="/dashboard"
           element={
