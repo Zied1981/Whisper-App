@@ -1,12 +1,14 @@
 import { UserService } from "../services/serviceIndex.js";
 
-async function getAllUsersCtrl(_, res) {
+async function getAllUsersCtrl(req, res) {
   try {
     const result = await UserService.showAllUsers();
     res.status(200).json({ result });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ err, message: err.message || "Could not get all users" });
+    res
+      .status(500)
+      .json({ err, message: err.message || "Could not get all users" });
   }
 }
 
@@ -17,13 +19,18 @@ async function postRegisterUserCtrl(req, res) {
     res.status(201).json({ result }); // 201 Status = "Created"
   } catch (err) {
     console.log(err);
-    res.status(500).json({ err, message: err.message || "Could not register user" });
+    res
+      .status(500)
+      .json({ err, message: err.message || "Could not register user" });
   }
 }
 
 async function postLoginUserCtrl(req, res) {
   try {
-    const userInfo = { nickname: req.body.nickname, password: req.body.password };
+    const userInfo = {
+      nickname: req.body.nickname,
+      password: req.body.password,
+    };
 
     const result = await UserService.loginUser(userInfo);
     if (result.tokens.refreshToken) {

@@ -6,8 +6,9 @@ export const usersRouter = express
   .Router()
   .get("/", UserController.getAllUsersCtrl)
   .post("/register", UserController.postRegisterUserCtrl)
-  .post("/login",  UserController.postLoginUserCtrl)
-  .post("refresh-token", validateRefreshToken, UserController.postRefreshAccessTokenCtrl);
-
-
-  
+  .post("/login", UserController.postLoginUserCtrl)
+  .post(
+    "/refresh-token",
+    validateRefreshToken,
+    UserController.postRefreshAccessTokenCtrl
+  );

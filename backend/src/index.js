@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import { connectToDatabase } from "./models/indexConnect.js";
 import { usersRouter } from "./routes/usersRouter.js";
+import { TweetsRouter } from "./routes/tweetRouter.js";
 
 const PORT = process.env.PORT || 10001;
 const app = express();
@@ -12,6 +13,7 @@ app.use(morgan("dev"));
 app.use(express.json()); // json body parser
 
 app.use("/api/v1/users", usersRouter);
+app.use("/api/v1/tweets", TweetsRouter);
 
 try {
   await connectToDatabase();
