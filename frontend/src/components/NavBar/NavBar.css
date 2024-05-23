@@ -1,0 +1,26 @@
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+}
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 40px #00000013;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.nav-bar .active svg {
+  border-radius: 15px 15px;
+  fill: rgb(97, 193, 206);
+}
+
+.nav-bar svg {
+  width: 1.5rem;
+  height: 2rem;
+}
