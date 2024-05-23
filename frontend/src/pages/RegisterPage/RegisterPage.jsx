@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./RegisterPage.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { backendUrl } from "../../api/api";
 
 const RegisterPage = () => {

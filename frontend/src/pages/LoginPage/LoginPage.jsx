@@ -17,7 +17,7 @@ const LoginPage = ({ setToken, setUser }) => {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({ nickname, password }),
-      /* credentials: "include" */
+      // credentials: "include",
     });
 
     const data = await res.json();

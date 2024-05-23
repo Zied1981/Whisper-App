@@ -5,6 +5,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 
 import { useState } from "react";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import AuthRequired from "./components/AuthRequired";
 
 function App() {
   const [token, setToken] = useState(); // aktuell verwendete accessToken
@@ -17,15 +18,14 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
 
         <Route path="/login" element={<LoginPage setToken={setToken} setUser={setUser} />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        {/* <Route
+        <Route
           path="/dashboard"
           element={
-            <AuthRequired token={token} setToken={setToken}>
+            <AuthRequired token={token}>
               <DashboardPage token={token} user={user} />
             </AuthRequired>
           }
-        /> */}
+        />
       </Routes>
     </BrowserRouter>
   );
