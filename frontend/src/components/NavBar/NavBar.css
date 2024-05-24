@@ -3,6 +3,7 @@
   bottom: 0;
   width: 100%;
   max-width: 450px;
+  margin-inline: auto;
 }
 
 .nav-bar-container {
