@@ -15,21 +15,7 @@ function App() {
 
   const [token, setToken] = useState(); // aktuell verwendete accessToken
   const [user, setUser] = useState();
-<<<<<<< HEAD
   console.log({ token });
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/dashboard" />} />
-        <Route path="/register" element={<RegisterPage />} />
-=======
-
-  /*   useEffect(() => {
-    setTimeout(() => {
-      setLoading(!loading);
-    }, 3000);
-  }, []); */
->>>>>>> 78d8d5ec76d8eab8fc24724a02a84a4033f8597a
 
   return (
     <>
@@ -41,7 +27,10 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/register" element={<RegisterPage />} />
 
-          <Route path="/login" element={<LoginPage setToken={setToken} setUser={setUser} />} />
+          <Route
+            path="/login"
+            element={<LoginPage setToken={setToken} setUser={setUser} />}
+          />
           <Route
             path="/dashboard"
             element={
