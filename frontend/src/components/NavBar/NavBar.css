@@ -17,7 +17,7 @@
 
 .nav-bar .active svg {
   border-radius: 15px 15px;
-  fill: rgb(97, 193, 206);
+  fill: black;
 }
 
 .nav-bar svg {

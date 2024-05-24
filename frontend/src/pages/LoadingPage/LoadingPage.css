@@ -7,20 +7,23 @@
 }
 .loading-sec img {
   padding-top: 5vw;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .loading-sec h3 {
   max-width: 250px;
   margin-inline: auto;
   text-align: center;
-  margin-bottom: 5vw;
+  margin-bottom: 100px;
 }
 .loading-sec button {
-  padding: 1vw 7vw;
-  border-radius: 10px;
+  padding: 1.5vw 7vw;
+  border-radius: 15px;
   border-style: none;
   background-color: rgb(163, 236, 253);
   font-weight: 900;
   font-size: large;
+  width: 250px;
+  display: block;
+  margin: auto;
 }
