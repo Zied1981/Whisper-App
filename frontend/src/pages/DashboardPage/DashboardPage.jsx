@@ -1,11 +1,11 @@
 import AddTweet from "../../components/AddTweet/AddTweet";
 import "./DashboardPage.css";
 
-const DashboardPage = ({  }) => {
+const DashboardPage = ({ token, user }) => {
   return (
     <>
       <h2>alo dash</h2>
-      <AddTweet />
+      <AddTweet token={token} />
     </>
   );
 };

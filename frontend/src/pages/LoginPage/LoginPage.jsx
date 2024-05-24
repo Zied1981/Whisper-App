@@ -21,18 +21,17 @@ const LoginPage = ({ setToken, setUser }) => {
     });
 
     const data = await res.json();
-
+    console.log(data);
     if (!data.result) {
-      setErrorMessage(
+      return setErrorMessage(
         data.message || "Failed to login,please try again"
         /*   navigate("/register") */
       );
-    } else {
-      navigate("/dashboard");
     }
 
     setToken(data.result.tokens.accessToken);
     setUser(data.result.user);
+    navigate("/dashboard");
   };
 
   return (
