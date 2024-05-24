@@ -10,7 +10,7 @@ import AuthRequired from "./components/AuthRequired";
 function App() {
   const [token, setToken] = useState(); // aktuell verwendete accessToken
   const [user, setUser] = useState();
-
+  console.log({ token });
   return (
     <BrowserRouter>
       <Routes>

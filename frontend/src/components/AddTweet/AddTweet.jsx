@@ -15,7 +15,7 @@ const AddTweet = ({ token, user }) => {
 
     const response = await fetch(`${backendUrl}/api/v1/tweets`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+      headers: { "Content-Type": "application/json", authorization: `Bearer ${token}` },
       body: JSON.stringify(newTweet),
     });
     const data = await response.json();

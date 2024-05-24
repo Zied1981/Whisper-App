@@ -11,8 +11,8 @@ export async function loginUser({ nickname, password }) {
   const correctPassword = passwordHash === user.passwordHash;
   if (!correctPassword) throw new Error("invalid login");
 
-  const accesToken = createToken(user, "access");
+  const accessToken = createToken(user, "access");
   //   const refreshToken = createToken(user, "refresh");
 
-  return { user: userToView(user), tokens: { accesToken } };
+  return { user: userToView(user), tokens: { accessToken } };
 }
