@@ -1,0 +1,15 @@
+.onboard h1 {
+  text-align: center;
+  margin-bottom: 200px;
+}
+.onboard button {
+  padding: 1.5vw 7vw;
+  border-radius: 15px;
+  border-style: none;
+  background-color: rgb(163, 236, 253);
+  font-weight: 900;
+  font-size: large;
+  width: 250px;
+  display: block;
+  margin: auto;
+}
