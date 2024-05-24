@@ -11,8 +11,6 @@ import OnboardingPage from "./pages/OnbordingPage/OnboardingPage";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  /* const [loading, setLoading] = useState(true); */
-
   const [token, setToken] = useState(); // aktuell verwendete accessToken
   const [user, setUser] = useState();
   console.log({ token });
