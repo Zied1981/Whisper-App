@@ -25,7 +25,23 @@ async function patchUpdateTweetCtrl(req, res) {
   }
 }
 
+async function getAllUserTweetsCtrl(req, res) {
+  try {
+    // Abrufen aller Benutzer-IDs
+    const userIds = await TweetService.getAllUserIds();
+
+    // Abrufen aller Tweets dieser Benutzer
+    const tweets = await TweetService.showAllUserTweets(userIds);
+
+    res.json({ tweets });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.message || "Cannot show tweets by users" });
+  }
+}
+
 export const TweetController = {
   postCreateTweetCtrl,
   patchUpdateTweetCtrl,
+  getAllUserTweetsCtrl,
 };

@@ -1,4 +1,5 @@
 import { Tweets } from "../../models/Tweets.js";
+
 export async function addtweet(authenticatedUserId, { content, likesfrom }) {
   if (!content) throw new error("please enter a content");
 
@@ -7,5 +8,6 @@ export async function addtweet(authenticatedUserId, { content, likesfrom }) {
     content,
     likesfrom,
   });
-  return { newTweet };
+
+  return newTweet;
 }

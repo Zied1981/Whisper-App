@@ -4,6 +4,7 @@ import { loginUser } from "./userService/loginUser.js";
 import { refreshAccessToken } from "./userService/refreshAccessToken.js";
 import { addtweet } from "./tweetService/addTweet.js";
 import { editTweet } from "./tweetService/editTweet.js";
+import { getAllUserIds, showAllUserTweets } from "./tweetService/showAlltweets.js";
 
 export const UserService = {
   showAllUsers,
@@ -15,4 +16,6 @@ export const UserService = {
 export const TweetService = {
   addtweet,
   editTweet,
+  showAllUserTweets,
+  getAllUserIds,
 };

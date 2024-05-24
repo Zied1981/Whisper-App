@@ -8,8 +8,8 @@ const userSchema = new mongoose.Schema(
     passwordHash: { type: String, required: true },
     passwordSalt: { type: String, required: true, trim: true },
     isEmailVerified: { type: Boolean, default: false },
-    followers: [{ type: String }],
-    following: [{ type: String }],
+    followers: [{ type: mongoose.Types.ObjectId, ref: "User" }],
+    following: [{ type: mongoose.Types.ObjectId, ref: "User" }],
 
     sixDigitCode: {
       type: String,
