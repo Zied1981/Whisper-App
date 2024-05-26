@@ -1,0 +1,28 @@
+.tweet-box {
+  display: flex;
+
+  flex-direction: column;
+  background-color: beige;
+
+  margin: auto;
+  border: 3px solid black;
+  padding: 5px;
+}
+.tweet-name {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.tweet-content {
+  font-size: 20px;
+  padding-bottom: 100px;
+  padding-top: 30px;
+}
+.tweet-date-flex {
+  display: flex;
+  gap: 15px;
+}
+.tweet-header {
+  display: flex;
+
+  justify-content: space-between;
+}

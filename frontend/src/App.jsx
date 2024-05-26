@@ -13,7 +13,6 @@ import NavBar from "./components/NavBar/NavBar";
 function App() {
   const [token, setToken] = useState(); // aktuell verwendete accessToken
   const [user, setUser] = useState();
-  console.log({ token });
 
   return (
     <>
@@ -25,10 +24,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/register" element={<RegisterPage />} />
 
-          <Route
-            path="/login"
-            element={<LoginPage setToken={setToken} setUser={setUser} />}
-          />
+          <Route path="/login" element={<LoginPage setToken={setToken} setUser={setUser} />} />
           <Route
             path="/dashboard"
             element={

@@ -6,9 +6,18 @@ async function getAllUsersCtrl(req, res) {
     res.status(200).json({ result });
   } catch (err) {
     console.log(err);
-    res
-      .status(500)
-      .json({ err, message: err.message || "Could not get all users" });
+    res.status(500).json({ err, message: err.message || "Could not get all users" });
+  }
+}
+
+async function getOneUserCtrl(req, res) {
+  try {
+    const userId = req.params.userId;
+    const result = await UserService.showOneUser(userId);
+    res.json({ result });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err, message: err.message || "Could not fond user" });
   }
 }
 
@@ -19,9 +28,7 @@ async function postRegisterUserCtrl(req, res) {
     res.status(201).json({ result }); // 201 Status = "Created"
   } catch (err) {
     console.log(err);
-    res
-      .status(500)
-      .json({ err, message: err.message || "Could not register user" });
+    res.status(500).json({ err, message: err.message || "Could not register user" });
   }
 }
 
@@ -56,6 +63,7 @@ async function postRefreshAccessTokenCtrl(req, res) {
 
 export const UserController = {
   getAllUsersCtrl,
+  getOneUserCtrl,
   postRegisterUserCtrl,
   postLoginUserCtrl,
   postRefreshAccessTokenCtrl,
