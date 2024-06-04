@@ -8,4 +8,8 @@ export const usersRouter = express
   .get("/:userId", UserController.getOneUserCtrl)
   .post("/register", UserController.postRegisterUserCtrl)
   .post("/login", UserController.postLoginUserCtrl)
-  .post("/refresh-token", validateRefreshToken, UserController.postRefreshAccessTokenCtrl);
+  .post(
+    "/refresh-token",
+    validateRefreshToken,
+    UserController.postRefreshAccessTokenCtrl
+  );
